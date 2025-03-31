@@ -1,0 +1,30 @@
+:root {
+  --primary-color: #f8b195;
+  --secondary-color: #f67280;
+  --text-color: #333;
+  --background-color: #fff;
+  --font-main: 'Noto Sans KR', sans-serif;
+  --font-accent: 'Playfair Display', serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  font-family: var(--font-main);
+  color: var(--text-color);
+  background-color: var(--background-color);
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+.container {
+  width: 100%;
+  max-width: 100%;
+  padding: 0 1rem;
+  margin: 0 auto;
+}
