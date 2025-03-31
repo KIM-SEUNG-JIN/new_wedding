@@ -1,0 +1,203 @@
+.imageUploader {
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.dropzone {
+  border: 2px dashed #ddd;
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dropzone.active {
+  border-color: var(--primary-color);
+  background-color: rgba(var(--primary-color-rgb), 0.05);
+}
+
+.dropzone.error {
+  border-color: #ff4d4f;
+}
+
+.placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #666;
+}
+
+.placeholder svg {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 1rem;
+  color: #999;
+}
+
+.placeholder p {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.fileInfo {
+  font-size: 0.8rem;
+  color: #999;
+}
+
+.currentImage {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.currentImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+  color: white;
+  font-weight: 500;
+}
+
+.currentImage:hover .overlay {
+  opacity: 1;
+}
+
+.errorMessage {
+  color: #ff4d4f;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.cropperContainer {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cropper {
+  position: relative;
+  width: 100%;
+  height: 300px;
+}
+
+.cropperControls {
+  padding: 1rem;
+  background-color: white;
+  border-top: 1px solid #eee;
+}
+
+.zoomControl {
+  margin-bottom: 1rem;
+}
+
+.zoomControl label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.zoomControl input {
+  width: 100%;
+}
+
+.cropperActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.cancelButton,
+.confirmButton {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.cancelButton {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.confirmButton {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.uploadingContainer {
+  padding: 2rem;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.progressBar {
+  width: 100%;
+  height: 8px;
+  background-color: #eee;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background-color: var(--primary-color);
+  transition: width 0.3s ease;
+}
+
+.spinner {
+  width: 30px;
+  height: 30px;
+  margin: 1rem auto;
+  animation: spin 1s linear infinite;
+}
+
+.spinner circle {
+  stroke: var(--primary-color);
+  stroke-linecap: round;
+  animation: dash 1.5s ease-in-out infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes dash {
+  0% {
+    stroke-dasharray: 1, 150;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -35;
+  }
+  100% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -124;
+  }
+}

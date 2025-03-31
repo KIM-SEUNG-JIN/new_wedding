@@ -1,0 +1,35 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main {
+  flex: 1;
+  width: 100%;
+}
+
+.mobile {
+  max-width: 100%;
+}
+
+.desktop {
+  max-width: 480px;
+  margin: 0 auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.footer {
+  padding: 1.5rem 0;
+  text-align: center;
+  font-size: 0.875rem;
+  color: #666;
+  background-color: #f9f9f9;
+}
+
+/* 모바일 디바이스에서 특정 요소 조정 */
+@media (max-width: 767px) {
+  .footer {
+    padding: 1rem 0;
+  }
+}
